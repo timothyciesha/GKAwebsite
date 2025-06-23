@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Gratia Karunia Agung - Distributor Material Bangunan Terpercaya</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="PT Gratia Karunia Agung adalah distributor material bangunan terpercaya di Banten dan Jakarta. Kami menyediakan material berkualitas tinggi dari merek ternama dengan layanan distribusi efisien.">
+    <meta name="keywords" content="distributor material bangunan, supplier material bangunan, Gika, Adiwisesa Mandiri, Mortar Indonesia, in-Lite, Intech, Union, Teknoklinz, Nohara, Royal Havilah, bahan bangunan berkualitas">
+    <meta name="author" content="PT Gratia Karunia Agung">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c; /* Default dark text */
+            background-color: #f7fafc; /* Light gray background */
+        }
+        .text-navy-blue {
+            color: #1A365D; /* Custom Navy Blue */
+        }
+        .bg-navy-blue {
+            background-color: #1A365D; /* Custom Navy Blue */
+        }
+        .hover\:bg-dark-blue:hover {
+            background-color: #0F233E; /* Slightly darker navy for hover */
+        }
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center rounded-b-lg">
+            <!-- Logo di Header -->
+            <a href="#hero" class="flex items-center">
+                <!-- Gika Black Logo for header (on white background) -->
+                <img src="gka-logo-black.png" alt="Logo PT Gratia Karunia Agung" class="h-16 w-auto rounded-full">
+            </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Home</a>
+                <a href="#achievements" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Pencapaian</a>
+                <a href="#about" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Tentang Kami</a>
+                <a href="#services" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Layanan</a>
+                <a href="#why-choose-us" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Mengapa Kami</a>
+                <a href="#brands" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Mitra Kami</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Testimonial</a>
+                <a href="#contact" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Hubungi Kami</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none focus:text-navy-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg rounded-b-lg">
+            <a href="#hero" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Home</a>
+            <a href="#achievements" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Pencapaian</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Tentang Kami</a>
+            <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Layanan</a>
+            <a href="#why-choose-us" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Mengapa Kami</a>
+            <a href="#brands" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Mitra Kami</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Testimonial</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center rounded-b-xl"
+        style="background-image: url('hero.png');">
+        <div class="absolute inset-0 bg-navy-blue opacity-70 rounded-b-xl"></div>
+        <div class="relative z-10 text-white p-6 md:p-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 rounded-lg">PT Gratia Karunia Agung</h1>
+            <p class="text-xl md:text-3xl font-semibold mb-6 rounded-md">Distributor Material Bangunan Terpercaya</p>
+            <p class="text-lg md:text-xl mb-8 rounded-md">PT Gratia Karunia Agung melayani lebih dari 500 pelanggan di wilayah Banten dan Jakarta dengan komitmen memberikan layanan dan produk material bangunan berkualitas tinggi.</p>
+            <a href="https://wa.me/6282173365187" target="_blank"
+               class="inline-block bg-white text-navy-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                Hubungi Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding bg-gray-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-6 rounded-md">Pencapaian Kami</h2>
+            <p class="text-gray-700 text-lg mb-12 max-w-3xl mx-auto rounded-md">Kepercayaan pelanggan dan kemitraan strategis menjadi bukti komitmen kami dalam memberikan layanan distribusi material bangunan terbaik.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Achievement 1: Pelanggan Setia -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="users" class="w-10 h-10 text-blue-500"></div>
+                    </div>
+                    <p class="text-4xl font-extrabold text-navy-blue mb-2 rounded-md">500+</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Pelanggan Setia</h3>
+                    <p class="text-gray-600 rounded-md">Toko material bangunan yang mempercayai layanan kami</p>
+                </div>
+                <!-- Achievement 2: Brand Partner -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="award" class="w-10 h-10 text-yellow-500"></div>
+                    </div>
+                    <p class="text-4xl font-extrabold text-navy-blue mb-2 rounded-md">9</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Brand Partner</h3>
+                    <p class="text-gray-600 rounded-md">Kemitraan dengan brand material bangunan ternama</p>
+                </div>
+                <!-- Achievement 3: Wilayah Layanan -->
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="map-pin" class="w-10 h-10 text-red-500"></div>
+                    </div>
+                    <p class="text-4xl font-extrabold text-navy-blue mb-2 rounded-md">2</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Wilayah Layanan</h3>
+                    <p class="text-gray-600 rounded-md">Banten dan Jakarta dengan jangkauan luas</p>
+                </div>
+                <!-- Achievement 4: Tahun Berdiri -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="calendar" class="w-10 h-10 text-purple-500"></div>
+                    </div>
+                    <p class="text-4xl font-extrabold text-navy-blue mb-2 rounded-md">2021</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Tahun Berdiri</h3>
+                    <p class="text-gray-600 rounded-md">Pengalaman dalam industri distribusi material</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Tentang Kami</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="our-story.png" alt="Gambar Cerita Perusahaan PT Gratia Karunia Agung" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-gray-700 text-lg leading-relaxed">
+                    <h3 class="text-2xl font-semibold text-navy-blue mb-4 rounded-md">Cerita Kami</h3>
+                    <p class="mb-6 rounded-md">Sejak didirikan pada 2021, PT Gratia Karunia Agung telah berkembang menjadi distributor material bangunan terpercaya yang melayani wilayah Banten dan Jakarta dengan komitmen tinggi terhadap kualitas dan kepuasan pelanggan.</p>
+                    <h3 class="text-2xl font-semibold text-navy-blue mb-4 rounded-md">Komitmen Kami Terhadap Kualitas</h3>
+                    <p class="mb-6 rounded-md">Kami memahami betapa pentingnya material berkualitas dalam setiap proyek konstruksi. Oleh karena itu, kami bermitra dengan brand-brand ternama dalam industri material bangunan untuk memastikan setiap produk yang kami distribusikan memenuhi standar kualitas tertinggi.</p>
+                    <p class="rounded-md">Dengan jaringan distribusi yang kuat dan tim profesional yang berpengalaman, kami berkomitmen untuk memberikan layanan terbaik kepada lebih dari 500 pelanggan yang tersebar di seluruh wilayah Banten dan Jakarta.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Mission -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Mission -->
+                        <div data-lucide="target" class="w-8 h-8 text-orange-500"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-blue mb-2 rounded-md">Misi Kami</h4>
+                    <p class="text-gray-600 rounded-md">Menyediakan material bangunan berkualitas tinggi dengan layanan distribusi yang efisien dan terpercaya.</p>
+                </div>
+                <!-- Vision -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Vision -->
+                        <div data-lucide="eye" class="w-8 h-8 text-green-500"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-blue mb-2 rounded-md">Visi Kami</h4>
+                    <p class="text-gray-600 rounded-md">Menjadi distributor material bangunan terdepan di Indonesia yang mendukung pembangunan infrastruktur berkualitas.</p>
+                </div>
+                <!-- Values -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Values -->
+                        <div data-lucide="gem" class="w-8 h-8 text-purple-500"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-blue mb-2 rounded-md">Nilai Kami</h4>
+                    <p class="text-gray-600 rounded-md">Integritas, kualitas, dan kepuasan pelanggan menjadi fondasi dalam setiap aspek bisnis kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Layanan Kami</h2>
+            <p class="text-center text-gray-700 text-lg mb-12 max-w-3xl mx-auto rounded-md">Kami menyediakan layanan distribusi material bangunan yang komprehensif untuk mendukung kebutuhan bisnis pelanggan kami.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Distribusi Material Berkualitas -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Building Materials -->
+                        <div data-lucide="construction" class="w-8 h-8 text-indigo-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-blue mb-3 rounded-md">Distribusi Material Berkualitas</h3>
+                    <p class="text-gray-600 rounded-md">Menyediakan berbagai jenis material bangunan dari brand-brand ternama dengan jaminan kualitas terbaik.</p>
+                </div>
+                <!-- Service 2: Layanan Pengiriman Cepat -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Fast Delivery -->
+                        <div data-lucide="truck" class="w-8 h-8 text-teal-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-blue mb-3 rounded-md">Layanan Pengiriman Cepat</h3>
+                    <p class="text-gray-600 rounded-md">Sistem distribusi yang efisien untuk memastikan material sampai tepat waktu di lokasi Anda.</p>
+                </div>
+                <!-- Service 3: Kemitraan Strategis -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for Strategic Partnership -->
+                        <div data-lucide="handshake" class="w-8 h-8 text-pink-500"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-blue mb-3 rounded-md">Kemitraan Strategis</h3>
+                    <p class="text-gray-600 rounded-md">Membangun hubungan jangka panjang dengan toko material bangunan di seluruh wilayah Banten dan Jakarta.</p>
+                </div>
+                <!-- Service 4: Customer Support 24/7 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <!-- Lucide icon for 24/7 Support -->
+                        <div data-lucide="headset" class="w-8 h-8 text-lime-600"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-blue mb-3 rounded-md">Customer Support 24/7</h3>
+                    <p class="text-gray-600 rounded-md">Tim customer service yang siap membantu kebutuhan dan pertanyaan pelanggan kapan saja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="section-padding bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Mengapa Memilih PT Gratia Karuna Agung?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reason 1: Kualitas Terjamin -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="badge-check" class="w-10 h-10 text-green-600"></div> </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Kualitas Terjamin</h3>
+                    <p class="text-gray-600 rounded-md">Material berkualitas dari brand ternama</p>
+                </div>
+                <!-- Reason 2: Pengiriman Cepat -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="zap" class="w-10 h-10 text-orange-500"></div> </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Pengiriman Cepat</h3>
+                    <p class="text-gray-600 rounded-md">Sistem distribusi yang efisien dan tepat waktu</p>
+                </div>
+                <!-- Reason 3: Kemitraan Terpercaya -->
+                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <div data-lucide="handshake" class="w-10 h-10 text-blue-500"></div> </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Kemitraan Terpercaya</h3>
+                    <p class="text-gray-600 rounded-md">Hubungan jangka panjang dengan pelanggan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Brands Section -->
+    <section id="brands" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Mitra Terpercaya Kami</h2>
+            <p class="text-center text-gray-700 text-lg mb-12 max-w-3xl mx-auto rounded-md">Kami bangga menjadi distributor resmi untuk brand-brand material bangunan terkemuka berikut, memastikan Anda mendapatkan produk dengan kualitas terbaik.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+                <!-- Sika -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="sika-logo.png" alt="Logo Sika" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Sika</p>
+                </div>
+                <!-- Adiwisesa Mandiri (AM) -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="am-logo.png" alt="Logo Adiwisesa Mandiri (AM)" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Adiwisesa Mandiri</p>
+                </div>
+                <!-- Mortar Indonesia -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="mortar-indonesia-logo.png" alt="Logo Mortar Indonesia" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Mortar Indonesia</p>
+                </div>
+                <!-- in-Lite -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="inlite-logo.png" alt="Logo in-Lite" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">in-Lite</p>
+                </div>
+                <!-- Intech -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="intech-logo.png" alt="Logo Intech" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Intech</p>
+                </div>
+                <!-- Union (UN) -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="union-logo.png" alt="Logo Union (UN)" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Union</p>
+                </div>
+                <!-- Teknoklinz -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="teknoklinz-logo.png" alt="Logo Teknoklinz" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Teknoklinz</p>
+                </div>
+                <!-- Nohara -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="nohara-logo.png" alt="Logo Nohara" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Nohara</p>
+                </div>
+                <!-- Royal Havilah -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
+                    <img src="royal-havilah-logo.png" alt="Logo Royal Havilah" class="max-h-full max-w-full object-contain h-24 mb-2">
+                    <p class="text-base font-bold text-gray-700">Royal Havilah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Carousel) -->
+    <section id="testimonials" class="section-padding bg-gray-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4 text-center relative">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Apa Kata Mereka Tentang Kami</h2>
+
+            <div class="relative w-full overflow-hidden rounded-xl">
+                <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
+                    <!-- Testimonial 1 -->
+                    <div class="w-full flex-shrink-0 p-8 bg-white rounded-xl shadow-lg">
+                        <p class="text-xl md:text-2xl italic text-gray-700 mb-6">"PT Gratia Karunia Agung adalah mitra distribusi terbaik yang pernah kami miliki. Pengiriman cepat dan kualitas produk yang konsisten membuat kami sangat puas."</p>
+                        <p class="text-lg font-semibold text-navy-blue">- Bpk. Andi, Pemilik Toko Bangunan Jaya</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="w-full flex-shrink-0 p-8 bg-white rounded-xl shadow-lg">
+                        <p class="text-xl md:text-2xl italic text-gray-700 mb-6">"Kemitraan strategis dengan Gika telah meningkatkan pasokan material kami secara signifikan. Tim mereka responsif dan sangat profesional."</p>
+                        <p class="text-lg font-semibold text-navy-blue">- Ibu Rina, Manajer Pembelian PT Konstruksi Sejahtera</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="w-full flex-shrink-0 p-8 bg-white rounded-xl shadow-lg">
+                        <p class="text-xl md:text-2xl italic text-gray-700 mb-6">"Dengan Gika, kami selalu mendapatkan material berkualitas dari brand ternama. Dukungan pelanggan mereka 24/7 benar-benar membantu operasional kami."</p>
+                        <p class="text-lg font-semibold text-navy-blue">- Sdr. Bayu, Direktur Utama Bangun Mandiri</p>
+                    </div>
+                    <!-- Testimonial 4 (New) -->
+                    <div class="w-full flex-shrink-0 p-8 bg-white rounded-xl shadow-lg">
+                        <p class="text-xl md:text-2xl italic text-gray-700 mb-6">"Pelayanan PT Gratia Karunia Agung sangat responsif. Setiap kebutuhan material kami terpenuhi dengan cepat dan tanpa kendala. Sangat direkomendasikan!"</p>
+                        <p class="text-lg font-semibold text-navy-blue">- Bapak Dimas, Manajer Proyek Bangun Jaya Konstruksi</p>
+                    </div>
+                    <!-- Testimonial 5 (New) -->
+                    <div class="w-full flex-shrink-0 p-8 bg-white rounded-xl shadow-lg">
+                        <p class="text-xl md:text-2xl italic text-gray-700 mb-6">"Kualitas produk yang ditawarkan Gika selalu konsisten dan terbaik di kelasnya. Ini sangat membantu kami dalam menjaga kualitas bangunan kami."</p>
+                        <p class="text-lg font-semibold text-navy-blue">- Ibu Santi, Pemilik Toko Material Utama</p>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation Arrows -->
+                <button id="prev-testimonial" class="absolute top-1/2 left-4 -translate-y-1/2 bg-navy-blue text-white p-3 rounded-full shadow-lg hover:bg-dark-blue transition duration-300 focus:outline-none">
+                    <svg data-lucide="chevron-left" class="w-6 h-6"></svg>
+                </button>
+                <button id="next-testimonial" class="absolute top-1/2 right-4 -translate-y-1/2 bg-navy-blue text-white p-3 rounded-full shadow-lg hover:bg-dark-blue transition duration-300 focus:outline-none">
+                    <svg data-lucide="chevron-right" class="w-6 h-6"></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Hubungi Kami</h2>
+
+            <div class="flex flex-col md:flex-row md:space-x-12 justify-center">
+                <!-- Contact Information -->
+                <div class="md:w-1/2 mb-8 md:mb-0 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-navy-blue mb-4 rounded-md">Informasi Kontak</h3>
+                    <p class="text-gray-700 text-lg mb-4 rounded-md">
+                        <strong class="text-black">Alamat:</strong> Gading Serpong, Tangerang, Indonesia
+                    </p>
+                    <p class="text-gray-700 text-lg mb-4 rounded-md">
+                        <strong class="text-black">Telepon:</strong> +62 821 7336 5187
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 rounded-md">
+                        <strong class="text-black">Email:</strong> gratiakaruniaagung@gmail.com
+                    </p>
+                    <a href="https://wa.me/6282173365187" target="_blank"
+                       class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105">
+                        Hubungi Kami via WhatsApp
+                    </a>
+                </div>
+
+                </div>
+            <div class="mt-12 rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.079251025553!2d106.6346853750012!3d-6.255866161271168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb2020202020%3A0x2020202020202020!2sGading%20Serpong%2C%20Tangerang!5e0!3m2!1sen!2sid!4v1688123456789!5m2!1sen!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-xl">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-blue text-white py-10 rounded-t-xl mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <!-- Footer Logo -->
+                <a href="#hero" class="flex items-center mb-4 md:mb-0">
+                    <img src="gka-logo-white.png" alt="Logo PT Gratia Karunia Agung (putih)" class="h-16 w-auto rounded-full"> <!-- Menggunakan logo putih -->
+                </a>
+
+                <!-- Quick Links -->
+                <div class="flex space-x-6">
+                    <a href="#hero" class="hover:text-gray-300 transition duration-300 rounded-md">Home</a>
+                    <a href="#about" class="hover:text-gray-300 transition duration-300 rounded-md">Tentang Kami</a>
+                    <a href="#services" class="hover:text-gray-300 transition duration-300 rounded-md">Layanan</a>
+                    <a href="#brands" class="hover:text-gray-300 transition duration-300 rounded-md">Mitra Kami</a>
+                    <a href="#contact" class="hover:text-gray-300 transition duration-300 rounded-md">Hubungi Kami</a>
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm">© 2025 PT Gratia Karunia Agung. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Lucide Icons, and Testimonial Carousel -->
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Optional: Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Testimonial Carousel Logic
+        let currentSlide = 0;
+        let testimonialsContainer;
+        let testimonials;
+        let totalSlides;
+
+        function updateCarousel() {
+            if (testimonialsContainer) {
+                testimonialsContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+        }
+
+        // Auto-play for carousel (optional)
+        let autoPlayInterval;
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Initialize Lucide Icons and start auto-play after the DOM is ready
+        window.onload = function() {
+            lucide.createIcons();
+
+            // Initialize carousel elements AFTER DOM is loaded
+            testimonialsContainer = document.getElementById('testimonial-carousel');
+            if (testimonialsContainer) {
+                testimonials = testimonialsContainer.children;
+                totalSlides = testimonials.length;
+
+                // Attach event listeners only if container exists and has slides
+                if (totalSlides > 1) {
+                    document.getElementById('next-testimonial')?.addEventListener('click', () => {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateCarousel();
+                    });
+
+                    document.getElementById('prev-testimonial')?.addEventListener('click', () => {
+                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                        updateCarousel();
+                    });
+
+                    startAutoPlay(); // Start auto-play if there's more than one testimonial
+                    testimonialsContainer.addEventListener('mouseover', stopAutoPlay);
+                    testimonialsContainer.addEventListener('mouseleave', startAutoPlay);
+                }
+            }
+        };
+    </script>
+</body>
+</html>
