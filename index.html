@@ -40,6 +40,51 @@
                 padding-bottom: 6rem;
             }
         }
+        /* Styles for the product carousel */
+        .product-carousel-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-shrink: 0;
+            width: 100%; /* Each item takes full width of its container */
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid for products */
+            gap: 1rem;
+            width: 100%;
+            max-width: 800px; /* Limit max width of product grid */
+            margin: 0 auto;
+        }
+        /* Specific grid for Mortar Indonesia to enforce 2 rows of 3 items on wider screens */
+        .mortar-product-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted min-width for more compact items */
+            gap: 1rem;
+        }
+        /* For desktop, ensure 3 columns for Mortar Indonesia to create 2 rows */
+        @media (min-width: 768px) {
+            .mortar-product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* Specific grid for In-lite & Intech Products to enforce 2 rows of 2 items on wider screens */
+        @media (min-width: 768px) {
+            .inlite-intech-product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for wider screens */
+            }
+        }
+        .product-card {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -60,8 +105,9 @@
                 <a href="#achievements" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Pencapaian</a>
                 <a href="#about" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Tentang Kami</a>
                 <a href="#services" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Layanan</a>
-                <a href="#why-choose-us" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Mengapa Kami</a>
                 <a href="#brands" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Mitra Kami</a>
+                <a href="#featured-products" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Produk Unggulan</a>
+                <a href="#why-choose-us" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Mengapa Kami</a>
                 <a href="#testimonials" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Testimonial</a>
                 <a href="#contact" class="text-gray-700 hover:text-navy-blue font-medium transition duration-300 rounded-md p-2">Hubungi Kami</a>
             </div>
@@ -82,8 +128,9 @@
             <a href="#achievements" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Pencapaian</a>
             <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Tentang Kami</a>
             <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Layanan</a>
-            <a href="#why-choose-us" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Mengapa Kami</a>
             <a href="#brands" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Mitra Kami</a>
+            <a href="#featured-products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Produk Unggulan</a>
+            <a href="#why-choose-us" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Mengapa Kami</a>
             <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Testimonial</a>
             <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy-blue rounded-md">Hubungi Kami</a>
         </div>
@@ -247,28 +294,201 @@
         </div>
     </section>
 
+    <!-- Our Brands Section -->
+    <section id="brands" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Mitra Terpercaya Kami</h2>
+            <p class="text-center text-gray-700 text-lg mb-12 max-w-3xl mx-auto rounded-md">Kami bangga menjadi distributor resmi untuk brand-brand material bangunan terkemuka berikut, memastikan Anda mendapatkan produk dengan kualitas terbaik.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center justify-center">
+                <!-- Sika -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="sika-logo.png" alt="Logo Sika" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Sika</p>
+                </div>
+                <!-- Adiwisesa Mandiri (AM) -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="am-logo.png" alt="Logo Adiwisesa Mandiri (AM)" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Adiwisesa Mandiri</p>
+                </div>
+                <!-- Mortar Indonesia -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="mortar-indonesia-logo.png" alt="Logo Mortar Indonesia" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Mortar Indonesia</p>
+                </div>
+                <!-- in-Lite -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="inlite-logo.png" alt="Logo in-Lite" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">in-Lite</p>
+                </div>
+                <!-- Intech -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="intech-logo.png" alt="Logo Intech" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Intech</p>
+                </div>
+                <!-- Union (UN) -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="union-logo.png" alt="Logo Union (UN)" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Union</p>
+                </div>
+                <!-- Teknoklinz -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="teknoklinz-logo.png" alt="Logo Teknoklinz" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Teknoklinz</p>
+                </div>
+                <!-- Nohara -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="nohara-logo.png" alt="Logo Nohara" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Nohara</p>
+                </div>
+                <!-- Royal Havilah -->
+                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center text-center">
+                    <img src="royal-havilah-logo.png" alt="Logo Royal Havilah" class="max-h-full max-w-full object-contain h-32 sm:h-40 mb-2"> <!-- Adjusted height -->
+                    <p class="text-base font-bold text-gray-700">Royal Havilah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products" class="section-padding bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-6 rounded-md">Produk Unggulan Kami</h2> <!-- Reduced mb for less gap -->
+            <p class="text-center text-gray-700 text-lg mb-8 max-w-3xl mx-auto rounded-md">Jelajahi beragam produk material bangunan berkualitas tinggi dari mitra brand terpercaya kami.</p> <!-- Reduced mb for less gap -->
+
+            <div class="relative w-full overflow-hidden rounded-xl">
+                <div id="product-carousel" class="flex transition-transform duration-500 ease-in-out">
+
+                    <!-- Sika Products Slide -->
+                    <div class="product-carousel-item p-4">
+                        <img src="sika-logo.png" alt="Logo Sika" class="h-16 w-auto mb-6">
+                        <h3 class="text-2xl font-bold text-navy-blue mb-6">Sika Products</h3>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="sika107.png" alt="Sika Top Seal" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Top Seal</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="sikatop.png" alt="Sika Top Plus" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Top Plus</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="sika215.png" alt="Sika Grouting 215" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Grouting 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AM Products Slide -->
+                    <div class="product-carousel-item p-4">
+                        <img src="am-logo.png" alt="Logo AM" class="h-16 w-auto mb-6">
+                        <h3 class="text-2xl font-bold text-navy-blue mb-6">AM Products</h3>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="am53.png" alt="AM 53" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">AM 53</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="am51.png" alt="AM 51" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">AM 51</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mortar Indonesia Products Slide -->
+                    <div class="product-carousel-item p-4">
+                        <img src="mortar-indonesia-logo.png" alt="Logo Mortar Indonesia" class="h-16 w-auto mb-6">
+                        <h3 class="text-2xl font-bold text-navy-blue mb-6">Mortar Indonesia Products</h3>
+                        <!-- Added specific class for Mortar Indonesia product grid for layout control -->
+                        <div class="product-grid mortar-product-grid">
+                            <div class="product-card">
+                                <img src="d1.png" alt="Mortar Indonesia D1" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">D1</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="d2.png" alt="Mortar Indonesia D2" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">D2</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="d3.png" alt="Mortar Indonesia D3" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">D3</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="k1.png" alt="Mortar Indonesia K1" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">K1</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="k2.png" alt="Mortar Indonesia K2" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">K2</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="k3.png" alt="Mortar Indonesia K3" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">K3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- In-lite & Intech Products Slide -->
+                    <div class="product-carousel-item p-4">
+                        <div class="flex items-center justify-center mb-6">
+                            <img src="inlite-logo.png" alt="Logo Inlite" class="h-16 w-auto mr-4">
+                            <img src="intech-logo.png" alt="Logo Intech" class="h-16 w-auto">
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-blue mb-6">In-lite & Intech Products</h3>
+                        <div class="product-grid inlite-intech-product-grid">
+                            <div class="product-card">
+                                <img src="inlitebulb.png" alt="Inlite Bulb Light" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Bulb Light</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="capsule.png" alt="Inlite Capsule" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Capsule</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="panel.png" alt="Inlite Panel Light" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Panel Light</p>
+                            </div>
+                            <div class="product-card">
+                                <img src="flood.png" alt="Inlite Flood Light" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Flood Light</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Product Carousel Navigation Arrows -->
+                <button id="prev-product" class="absolute top-1/2 left-4 -translate-y-1/2 bg-navy-blue text-white p-3 rounded-full shadow-lg hover:bg-dark-blue transition duration-300 focus:outline-none">
+                    <svg data-lucide="chevron-left" class="w-6 h-6"></svg>
+                </button>
+                <button id="next-product" class="absolute top-1/2 right-4 -translate-y-1/2 bg-navy-blue text-white p-3 rounded-full shadow-lg hover:bg-dark-blue transition duration-300 focus:outline-none">
+                    <svg data-lucide="chevron-right" class="w-6 h-6"></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="section-padding bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+    <section id="why-choose-us" class="section-padding bg-gray-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Mengapa Memilih PT Gratia Karuna Agung?</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Reason 1: Kualitas Terjamin -->
-                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                <div class="p-6 rounded-xl shadow-lg bg-white transform hover:scale-105 transition duration-300">
                     <div class="flex justify-center mb-4">
                         <div data-lucide="badge-check" class="w-10 h-10 text-green-600"></div> </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Kualitas Terjamin</h3>
                     <p class="text-gray-600 rounded-md">Material berkualitas dari brand ternama</p>
                 </div>
                 <!-- Reason 2: Pengiriman Cepat -->
-                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                <div class="p-6 rounded-xl shadow-lg bg-white transform hover:scale-105 transition duration-300">
                     <div class="flex justify-center mb-4">
                         <div data-lucide="zap" class="w-10 h-10 text-orange-500"></div> </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Pengiriman Cepat</h3>
                     <p class="text-gray-600 rounded-md">Sistem distribusi yang efisien dan tepat waktu</p>
                 </div>
                 <!-- Reason 3: Kemitraan Terpercaya -->
-                <div class="p-6 rounded-xl shadow-lg bg-gray-50 transform hover:scale-105 transition duration-300">
+                <div class="p-6 rounded-xl shadow-lg bg-white transform hover:scale-105 transition duration-300">
                     <div class="flex justify-center mb-4">
                         <div data-lucide="handshake" class="w-10 h-10 text-blue-500"></div> </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-md">Kemitraan Terpercaya</h3>
@@ -278,64 +498,8 @@
         </div>
     </section>
 
-    <!-- Our Brands Section -->
-    <section id="brands" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Mitra Terpercaya Kami</h2>
-            <p class="text-center text-gray-700 text-lg mb-12 max-w-3xl mx-auto rounded-md">Kami bangga menjadi distributor resmi untuk brand-brand material bangunan terkemuka berikut, memastikan Anda mendapatkan produk dengan kualitas terbaik.</p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
-                <!-- Sika -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="sika-logo.png" alt="Logo Sika" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Sika</p>
-                </div>
-                <!-- Adiwisesa Mandiri (AM) -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="am-logo.png" alt="Logo Adiwisesa Mandiri (AM)" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Adiwisesa Mandiri</p>
-                </div>
-                <!-- Mortar Indonesia -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="mortar-indonesia-logo.png" alt="Logo Mortar Indonesia" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Mortar Indonesia</p>
-                </div>
-                <!-- in-Lite -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="inlite-logo.png" alt="Logo in-Lite" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">in-Lite</p>
-                </div>
-                <!-- Intech -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="intech-logo.png" alt="Logo Intech" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Intech</p>
-                </div>
-                <!-- Union (UN) -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="union-logo.png" alt="Logo Union (UN)" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Union</p>
-                </div>
-                <!-- Teknoklinz -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="teknoklinz-logo.png" alt="Logo Teknoklinz" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Teknoklinz</p>
-                </div>
-                <!-- Nohara -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="nohara-logo.png" alt="Logo Nohara" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Nohara</p>
-                </div>
-                <!-- Royal Havilah -->
-                <div class="p-4 bg-white rounded-lg shadow-sm transform hover:scale-105 transition duration-300 w-full h-auto flex flex-col items-center justify-center">
-                    <img src="royal-havilah-logo.png" alt="Logo Royal Havilah" class="max-h-full max-w-full object-contain h-24 mb-2">
-                    <p class="text-base font-bold text-gray-700">Royal Havilah</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials Section (Carousel) -->
-    <section id="testimonials" class="section-padding bg-gray-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
+    <section id="testimonials" class="section-padding bg-gray-100 rounded-xl shadow-md mx-4 md:mx-auto mt-8 mb-8 max-w-6xl">
         <div class="container mx-auto px-4 text-center relative">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-navy-blue mb-12 rounded-md">Apa Kata Mereka Tentang Kami</h2>
 
@@ -405,7 +569,7 @@
                     </div>
                     <a href="https://wa.me/6285285861433" target="_blank"
                        class="inline-flex items-center justify-center bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 mt-8 group">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2 -ml-1 group-hover:rotate-6 transition duration-300"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 7.6 4.7 8.38 8.38 0 0 1 .9 3.8v.5z"></path></svg>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2 -ml-1 group-hover:rotate-6 transition duration-300"><path d="M21 11.5a8.38 8.38 0 0 1-.9 instanceof 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 7.6 4.7 8.38 8.38 0 0 1 .9 3.8v.5z"></path></svg>
                         Hubungi Kami via WhatsApp
                     </a>
                 </div>
@@ -436,6 +600,7 @@
                     <a href="#hero" class="hover:text-gray-300 transition duration-300 rounded-md">Home</a>
                     <a href="#about" class="hover:text-gray-300 transition duration-300 rounded-md">Tentang Kami</a>
                     <a href="#services" class="hover:text-gray-300 transition duration-300 rounded-md">Layanan</a>
+                    <a href="#featured-products" class="hover:text-gray-300 transition duration-300 rounded-md">Produk Unggulan</a>
                     <a href="#brands" class="hover:text-gray-300 transition duration-300 rounded-md">Mitra Kami</a>
                     <a href="#contact" class="hover:text-gray-300 transition duration-300 rounded-md">Hubungi Kami</a>
                 </div>
@@ -444,7 +609,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu, Lucide Icons, and Testimonial Carousel -->
+    <!-- JavaScript for Mobile Menu, Lucide Icons, and Carousel Logic -->
     <script>
         // Mobile menu toggle functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -480,55 +645,94 @@
         });
 
         // Testimonial Carousel Logic
-        let currentSlide = 0;
+        let currentTestimonialSlide = 0;
         let testimonialsContainer;
         let testimonials;
-        let totalSlides;
+        let totalTestimonialSlides;
 
-        function updateCarousel() {
+        function updateTestimonialCarousel() {
             if (testimonialsContainer) {
-                testimonialsContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                testimonialsContainer.style.transform = `translateX(-${currentTestimonialSlide * 100}%)`;
             }
         }
 
-        // Auto-play for carousel (optional)
-        let autoPlayInterval;
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateCarousel();
+        let testimonialAutoPlayInterval;
+        function startTestimonialAutoPlay() {
+            testimonialAutoPlayInterval = setInterval(() => {
+                currentTestimonialSlide = (currentTestimonialSlide + 1) % totalTestimonialSlides;
+                updateTestimonialCarousel();
             }, 5000); // Change slide every 5 seconds
         }
 
-        function stopAutoPlay() {
-            clearInterval(autoPlayInterval);
+        function stopTestimonialAutoPlay() {
+            clearInterval(testimonialAutoPlayInterval);
         }
 
-        // Initialize Lucide Icons and start auto-play after the DOM is ready
+        // Product Carousel Logic
+        let currentProductSlide = 0;
+        let productCarouselContainer;
+        let productSlides;
+        let totalProductSlides;
+
+        function updateProductCarousel() {
+            if (productCarouselContainer) {
+                productCarouselContainer.style.transform = `translateX(-${currentProductSlide * 100}%)`;
+            }
+        }
+
+        let productAutoPlayInterval;
+        function startProductAutoPlay() {
+            productAutoPlayInterval = setInterval(() => {
+                currentProductSlide = (currentProductSlide + 1) % totalProductSlides;
+                updateProductCarousel();
+            }, 7000); // Change slide every 7 seconds for products
+        }
+
+        function stopProductAutoPlay() {
+            clearInterval(productAutoPlayInterval);
+        }
+
+        // Initialize Lucide Icons and start carousels after the DOM is ready
         window.onload = function() {
             lucide.createIcons();
 
-            // Initialize carousel elements AFTER DOM is loaded
+            // Initialize testimonial carousel elements
             testimonialsContainer = document.getElementById('testimonial-carousel');
             if (testimonialsContainer) {
                 testimonials = testimonialsContainer.children;
-                totalSlides = testimonials.length;
-
-                // Attach event listeners only if container exists and has slides
-                if (totalSlides > 1) {
+                totalTestimonialSlides = testimonials.length;
+                if (totalTestimonialSlides > 1) {
                     document.getElementById('next-testimonial')?.addEventListener('click', () => {
-                        currentSlide = (currentSlide + 1) % totalSlides;
-                        updateCarousel();
+                        currentTestimonialSlide = (currentTestimonialSlide + 1) % totalTestimonialSlides;
+                        updateTestimonialCarousel();
                     });
-
                     document.getElementById('prev-testimonial')?.addEventListener('click', () => {
-                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                        updateCarousel();
+                        currentTestimonialSlide = (currentTestimonialSlide - 1 + totalTestimonialSlides) % totalTestimonialSlides;
+                        updateTestimonialCarousel();
                     });
+                    startTestimonialAutoPlay();
+                    testimonialsContainer.addEventListener('mouseover', stopTestimonialAutoPlay);
+                    testimonialsContainer.addEventListener('mouseleave', startTestimonialAutoPlay);
+                }
+            }
 
-                    startAutoPlay(); // Start auto-play if there's more than one testimonial
-                    testimonialsContainer.addEventListener('mouseover', stopAutoPlay);
-                    testimonialsContainer.addEventListener('mouseleave', startAutoPlay);
+            // Initialize product carousel elements
+            productCarouselContainer = document.getElementById('product-carousel');
+            if (productCarouselContainer) {
+                productSlides = productCarouselContainer.children;
+                totalProductSlides = productSlides.length;
+                if (totalProductSlides > 1) {
+                    document.getElementById('next-product')?.addEventListener('click', () => {
+                        currentProductSlide = (currentProductSlide + 1) % totalProductSlides;
+                        updateProductCarousel();
+                    });
+                    document.getElementById('prev-product')?.addEventListener('click', () => {
+                        currentProductSlide = (currentProductSlide - 1 + totalProductSlides) % totalProductSlides;
+                        updateProductCarousel();
+                    });
+                    startProductAutoPlay();
+                    productCarouselContainer.addEventListener('mouseover', stopProductAutoPlay);
+                    productCarouselContainer.addEventListener('mouseleave', startProductAutoPlay);
                 }
             }
         };
