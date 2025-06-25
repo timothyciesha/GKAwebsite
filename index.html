@@ -75,6 +75,12 @@
                 grid-template-columns: repeat(2, 1fr); /* 2 columns for wider screens */
             }
         }
+        /* Specific grid for Sika Products to enforce 2 rows of 2 items on wider screens */
+        @media (min-width: 768px) {
+            .sika-product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for wider screens to make 2 rows with 4 items */
+            }
+        }
         .product-card {
             background-color: #ffffff;
             padding: 1rem;
@@ -363,7 +369,7 @@
                     <div class="product-carousel-item p-4">
                         <img src="sika-logo.png" alt="Logo Sika" class="h-16 w-auto mb-6">
                         <h3 class="text-2xl font-bold text-navy-blue mb-6">Sika Products</h3>
-                        <div class="product-grid">
+                        <div class="product-grid sika-product-grid"> <!-- Added sika-product-grid class -->
                             <div class="product-card">
                                 <img src="sika107.png" alt="Sika Top Seal" class="w-full h-auto rounded-md mb-2">
                                 <p class="text-sm font-medium text-gray-800">Top Seal</p>
@@ -375,6 +381,10 @@
                             <div class="product-card">
                                 <img src="sika215.png" alt="Sika Grouting 215" class="w-full h-auto rounded-md mb-2">
                                 <p class="text-sm font-medium text-gray-800">Grouting 215</p>
+                            </div>
+                            <div class="product-card"> <!-- Added new product -->
+                                <img src="deckseal.png" alt="Sika Deckseal" class="w-full h-auto rounded-md mb-2">
+                                <p class="text-sm font-medium text-gray-800">Deckseal</p>
                             </div>
                         </div>
                     </div>
